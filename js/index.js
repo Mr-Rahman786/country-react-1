@@ -11,12 +11,12 @@ const displaycountries = countries => {
 }
 
 const showDataHtml = country => {
-    console.log(country)
+    const {name,flags}=country
     return `
     <div class="card-body">
-        <h3>${country.name.common.slice(0,10)}</h3>
+        <h3>${name.common.slice(0,10)}</h3>
         <div class="images">
-            <img src="${country.flags.png}">
+            <img src="${flags.png}">
         </div>
 
     </div>
