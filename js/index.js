@@ -7,16 +7,18 @@ const displaycountries = countries => {
     const allcountriesHTML = countries.map(country => showDataHtml(country));
     // console.log(allcountriesHTML[0]);
     const container = document.getElementById('contries');
-    container.innerHTML = allcountriesHTML;
+    container.innerHTML = allcountriesHTML.join(' ');
 }
 
 const showDataHtml = country => {
     console.log(country)
     return `
-    <div>
-        <h3>${country.name.common}</h3>
-        <img src="${country.flags.png}">
-        
+    <div class="card-body">
+        <h3>${country.name.common.slice(0,10)}</h3>
+        <div class="images">
+            <img src="${country.flags.png}">
+        </div>
+
     </div>
     `
 }

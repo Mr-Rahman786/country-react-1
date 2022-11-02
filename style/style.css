@@ -1,0 +1,10 @@
+.contries {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.images img{
+    width: 200px;
+}
+.card-body{
+    background-color: gray;
+}
